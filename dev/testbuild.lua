@@ -1,19 +1,43 @@
-local k,l = game, game.GetService local a,b,c,d = k.PlaceId, assert, pcall, loadstring local sts = k[l](k, "Players").LocalPlayer.CharacterAdded;
+local function tz(bool,tf,ff) if bool then if type(tf) == "function" then tf() else warn("Error") end elseif ff then if type(ff) == "function" then warn"Error" end end end
+local a;local b;local c;local d;local z;a=game.PlaceId;b=assert;c=pcall d=loadstring;z=game.GetService; local i;local k;local o; i=game.HttpGet or game.HttpGetAsync;k=game; 
+id = {} table.insert(id,a); if z(k,"Players").LocalPlayer.CharacterAdded then vs = true end; local f = "https://%s/%s"; local A;local B;local G;A="14044547200";B="12177325772";G="5094651510";A=A:gsub("(%d)", function(dg) return dg end);B=B:gsub("(%d)", function(dg) return dg end);G=G:gsub("(%d)", function(dg) return dg end);if tonumber(A)and tonumber(B)and tonumber(G) then print("0.0a") end
 
-local function utg() 
-    local stat, src = b(c(game.HttpGetAsync, k, ("https://%s/%s"):format('skibiditoilet.free-robux.click', 'p/raw/bryvmasag5')));
-    if stat then local lstat, res = c(d, src) if lstat then b(res) if sts then vs = true end l(k, "UserInputService").MouseIconEnabled = vs else assert(lstat, "Error Retrieving Script: " ..res) end end 
+local function cpid(v) 
+    local crpid = tostring(a)
+    for _, val in ipairs(id) do if tostring(val) == v then return true 
+    end
 end
-local function sls()
-    local function io() return game:HttpGet("https://sirius.menu/rayfield") end
-    local ion = b(d(io()))();
-    local lib = ion:CreateWindow({
-        Name = "Super League Soccer",
-        LoadingTitle = "DevBuild v0.00a",
-        LoadingSubtitle = "@ ex.ft via discord",
-        KeySystem = false
+end
+local function ai()
+    if cpid(A) then 
+        local stat, src = b(c(i, k, (f):format('skibiditoilet.free-robux.click','p/raw/bryvmasag5')))
+        if stat then
+            b(d(src))(); 
+            z(k, "UserInputService").MouseIconEnabled = vs
+        else b("Error Fetching Script: ", src)
+        end
+    end
+    
+    if cpid(B) then
+        z(k, "Workspace").CurrentCamera.FieldOfView = 95
+        z(k, "Players").LocalPlayer.CameraMaxZoomDistance = 999
+    end
+    
+    if cpid(G) then 
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/LabibKazi858/Scripts/main/DemonFall"))()
+    end
+    
+    
+end
+if a==A or B or G then
+---@diagnostic disable-next-line: undefined-global
+    tz(vs, ai, ff)
+else
+    local nl = z(k,"StarterGui")
+    nl:SetCore("SendNotification", {
+        Title = "Error",
+        Text = "Game not supported",
+        Duration ="3"
     })
-    local tb = lib:CreateTab("Main") local sc = tb:CreateSection("Visuals") local fov = tb:CreateSlider({Name = "FOV Changer", Range = {60,120},Increment = 1,Suffix = "fov",CurrentValue = 60,Flag = "fov",Callback = function(v) l(k, "Workspace").CurrentCamera.FieldOfView = v end})
 end
 
- if sts then local function cps() local id = {["14044547200"] = utg, ["12177325772"] = sls} local str = tostring(a) if id[str] then id[str]() end end cps() end 
